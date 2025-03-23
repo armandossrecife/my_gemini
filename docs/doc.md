@@ -18,6 +18,10 @@ Este projeto é uma aplicação Python que faz perguntas para o Gemini (um model
 │   ├── __init__.py             # Inicialização do módulo
 │   ├── tempo.py                # Funções relacionadas a data e hora
 │   ├── texto.py                # Funções para manipulação de texto
+├── testes                      # Testes automáticos da aplicação
+│   ├── test_manipulador.py     # Testes automáticos do módulo gemini/manipulador.py
+│   ├── test_texto.py           # Testes automáticos do módulo utilidades/texto.py
+│   ├── test_tempo.py           # Testes automáticos do módulo utilidades/tempo.py
 └── respostas                   # Pasta para armazenar respostas do Gemini
     ├── 2025-03-23_11-14-10.json
     ├── 2025-03-23_11-32-07.json
@@ -75,6 +79,14 @@ Este projeto é uma aplicação Python que faz perguntas para o Gemini (um model
    - `resposta_prompt_2025-03-23_11-14-10.md`: Resposta formatada em Markdown.
 
 ---
+
+## Execução dos testes automáticos
+
+No diretório principal do projeto: 
+
+```bash
+python3 run_tests.py
+```
 
 ## Dependências
 As dependências do projeto estão listadas no arquivo `requirements.txt`. Para instalá-las, execute:
