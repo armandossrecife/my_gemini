@@ -37,3 +37,6 @@ Caso a execução seja feita com sucesso, o programa vai gerar as respostas em d
 ```bash
 python3 run_tests.py
 ```
+## Referências
+
+AI Google Dev: https://ai.google.dev/gemini-api/docs?hl=pt-br#python
