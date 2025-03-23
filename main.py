@@ -1,6 +1,5 @@
 import os
 import time
-from utilidades.texto import Utils
 from gemini.manipulador import Gemini
 
 # API endpoint and API key
@@ -10,8 +9,7 @@ api_key = os.getenv('API_KEY')
 # Add the API key to the URL
 url_with_key = f"{url}?key={api_key}"
 
-# Instancia as classes de utilidadee e Gemini
-utilidades_texto = Utils()
+# Instancia a classe que acessa o Gemini
 my_gemini = Gemini()
 
 def ask(pergunta: str, url_with_key: str, file_to_save: str):
