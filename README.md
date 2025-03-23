@@ -31,3 +31,9 @@ Qual a sua pergunta?
 Caso a execução seja feita com sucesso, o programa vai gerar as respostas em dois arquivos: 
 - .json contendo o resultado do Gemini
 - .md contendo a resposta em Markdown
+
+## 5. Executando os testes automáticos
+
+```bash
+python3 run_tests.py
+```
