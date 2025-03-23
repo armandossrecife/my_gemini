@@ -1,0 +1,48 @@
+@startuml
+
+' Definindo as classes
+class Gemini {
+    - utilidades_texto: Utils
+    - tempo: Tempo
+    - instante: str
+    - headers: dict
+
+    + __init__()
+    + set_instante(valor: str)
+    + set_payload(prompt: str): dict
+    + ask_to_gemini(question: str, url_with_key: str, file_to_save: str)
+}
+
+class Utils {
+    + __init__()
+    + save_text_in_file_based_time(content: Union[dict, str], tempo: str)
+    + convert_text_to_markdown(generated_text: str, filename: str, tempo: str)
+}
+
+class Tempo {
+    + __init__()
+    + get_current_date_and_time(): str
+}
+
+' Relacionamentos
+Gemini --> Utils : utiliza
+Gemini --> Tempo : utiliza
+
+' Notas explicativas
+note top of Gemini
+    Classe responsável por interagir
+    com a API do Gemini, enviar perguntas
+    e processar respostas.
+end note
+
+note top of Utils
+    Classe utilitária para manipulação
+    de texto e salvamento de arquivos.
+end note
+
+note top of Tempo
+    Classe utilitária para manipulação
+    de data e hora.
+end note
+
+@enduml
